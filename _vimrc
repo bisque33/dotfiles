@@ -49,15 +49,15 @@ if has('vim_starting')
 endif
 
 " neosnippet
-NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'Shougo/neosnippet'
-NeoBundle 'Shougo/neosnippet-snippets'
+" NeoBundle 'Shougo/neocomplcache'
+" NeoBundle 'Shougo/neosnippet'
+" NeoBundle 'Shougo/neosnippet-snippets'
 " unite: 最近使ったファイルを表示する
-NeoBundle 'Shougo/unite.vim'
+" NeoBundle 'Shougo/unite.vim'
 " マルチカーソル
-NeoBundle 'terryma/vim-multiple-cursors'
+" NeoBundle 'terryma/vim-multiple-cursors'
 " ScalaのSyntax
-NeoBundle 'derekwyatt/vim-scala'
+" NeoBundle 'derekwyatt/vim-scala'
 
 filetype plugin indent on
 filetype indent on
