@@ -3,9 +3,10 @@
 
 set -x EDITOR vim
 
-# peco
+# key bind
 function fish_user_key_bindings
-    bind \cr peco_select_history
+  bind \cr peco_select_history # peco
+  bind \cg peco_select_ghq_repository  # ghq
 end
 
 # alias
