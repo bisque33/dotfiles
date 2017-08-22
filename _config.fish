@@ -26,6 +26,9 @@ balias awslogs lazy-awslogs
 # goenv init - | psub
 # source (goenv init - | psub)
 
+# nodebrew
+set -x PATH $HOME/.nodebrew/current/bin/ $PATH
+
 # direnv
 eval (direnv hook fish)
 
