@@ -87,7 +87,7 @@ set reference-format		= [branch] <tag> {remote} ~replace~
 
 # Settings controlling how content is read from Git
 set commit-order		= auto		# Enum: auto, default, topo, date, reverse (main)
-set status-untracked-dirs	= yes		# Show files in untracked directories? (status)
+set status-show-untracked-files	= yes		# Show files in untracked directories? (status)
 set ignore-space		= no		# Enum: no, all, some, at-eol (diff)
 set show-notes			= yes		# When non-bool passed as `--show-notes=...` (diff)
 #set diff-context		= 3		# Number of lines to show around diff changes (diff)
@@ -96,7 +96,6 @@ set show-notes			= yes		# When non-bool passed as `--show-notes=...` (diff)
 #set log-options		= --pretty=raw	# User-defined options for `tig log` (git-log)
 #set main-options		= -n 1000	# User-defined options for `tig` (git-log)
 #set mailmap			= yes		# Use .mailmap to show canonical name and email address
-set status-show-untracked-files = yes		# 追記: untrackedファイルを表示する
 
 # Misc
 set refresh-mode		= auto		# Enum: manual, auto, after-command, periodic
