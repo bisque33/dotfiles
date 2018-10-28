@@ -167,3 +167,17 @@ if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then source '$HOME/google
 
 # kubectl
 source <(kubectl completion zsh)
+
+################################################
+# https://github.com/coinbase/assume-role
+################################################
+source $(which assume-role)
+
+# Prompt
+# AWS ACCOUNT NAME
+function aws_account_info {
+  [ "$AWS_ACCOUNT_NAME" ] && [ "$AWS_ACCOUNT_ROLE" ] && echo "%F{blue}aws:(%f%F{red}$AWS_ACCOUNT_NAME:$AWS_ACCOUNT_ROLE%f%F{blue})%F$reset_color"
+}
+
+# )ofni_tnuocca_swa($ is $(aws_account_info) backwards
+PROMPT=`echo $PROMPT | rev | sed 's/ / )ofni_tnuocca_swa($ /'| rev`
