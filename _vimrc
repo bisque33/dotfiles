@@ -39,30 +39,58 @@ set hidden
 set showmatch
 " 改行時に入力された行の末尾に合わせて次の行のインデントを増減する
 set smartindent
+" deleteが聞かない対策
+set backspace=indent,eol,start
 
 filetype off
 
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim
-  call neobundle#begin(expand('~/.vim/bundle/'))
-  call neobundle#end()
-endif
-
-" neosnippet
-" NeoBundle 'Shougo/neocomplcache'
-" NeoBundle 'Shougo/neosnippet'
-" NeoBundle 'Shougo/neosnippet-snippets'
-" unite: 最近使ったファイルを表示する
-" NeoBundle 'Shougo/unite.vim'
-" マルチカーソル
-" NeoBundle 'terryma/vim-multiple-cursors'
-" ScalaのSyntax
-" NeoBundle 'derekwyatt/vim-scala'
-
-filetype plugin indent on
-filetype indent on
-
 syntax on
 
-" vim起動時に未インストールのプラグインをインストールする
-NeoBundleCheck
+"dein Scripts-----------------------------
+if &compatible
+  set nocompatible               " Be iMproved
+endif
+
+" Required:
+set runtimepath+=/Users/bisque33/.cache/dein/repos/github.com/Shougo/dein.vim
+
+" Required:
+if dein#load_state('/Users/bisque33/.cache/dein')
+  call dein#begin('/Users/bisque33/.cache/dein')
+
+  " Let dein manage dein
+  " Required:
+  call dein#add('/Users/bisque33/.cache/dein/repos/github.com/Shougo/dein.vim')
+
+  " Add or remove your plugins here like this:
+  call dein#add('Shougo/neosnippet.vim')
+  call dein#add('Shougo/neosnippet-snippets')
+  " ディレクトリツリー
+  call dein#add('scrooloose/nerdtree')
+  " マルチカーソル
+  call dein#add('terryma/vim-multiple-cursors')
+
+  " Required:
+  call dein#end()
+  call dein#save_state()
+endif
+
+" Required:
+filetype plugin indent on
+syntax enable
+
+" If you want to install not installed plugins on startup.
+if dein#check_install()
+  call dein#install()
+endif
+
+"End dein Scripts-------------------------
+
+" key map --------------------------------
+" Toggle NERDTree
+map <C-t> :NERDTreeToggle<CR>
+" move left Tab
+"map <C-[> gT " 有効にすると起動時に置換モードになってしまう
+" move right Tab
+map <C-]> gt
+

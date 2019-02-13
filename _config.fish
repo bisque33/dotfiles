@@ -16,8 +16,6 @@ balias gs 'git status'
 balias be 'bundle exec'
 balias docc 'docker-compose'
 balias kube 'kubectl'
-balias vim 'nvim'
-balias awslogs lazy-awslogs
 
 # anyenv 非対応
 # set -x PATH "$HOME/.anyenv/bin $PATH"
