@@ -10,9 +10,6 @@ function fish_user_key_bindings
 end
 
 # alias
-balias gb 'git branch'
-balias gc 'git checkout'
-balias gs 'git status'
 balias be 'bundle exec'
 balias docc 'docker-compose'
 balias kube 'kubectl'
