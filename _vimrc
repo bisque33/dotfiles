@@ -30,6 +30,10 @@ set hlsearch
 " 検索ワードの最初の文字を入力した時点で検索を開始する
 set incsearch
 
+"========== その他 ==========
+" マウス操作
+set mouse=a "aはすべてのモードで許可
+set ttymouse=xterm2
 
 "========== その他 ==========
 "保存しなくてもbufferの切り替えができる
@@ -70,7 +74,11 @@ if dein#load_state('~/.cache/dein')
   " マルチカーソル
   call dein#add('terryma/vim-multiple-cursors')
 
-  " Required:
+  " TypeScript
+  call dein#add('leafgarland/typescript-vim')
+
+  " Requiredls
+  "
   call dein#end()
   call dein#save_state()
 endif
@@ -89,8 +97,4 @@ endif
 " key map --------------------------------
 " Toggle NERDTree
 map <C-t> :NERDTreeToggle<CR>
-" move left Tab
-"map <C-[> gT " 有効にすると起動時に置換モードになってしまう
-" move right Tab
-map <C-]> gt
 
