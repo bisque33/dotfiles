@@ -32,5 +32,8 @@ eval (direnv hook fish)
 set -x GOPATH $HOME/go
 set -x PATH $PATH $GOPATH/bin
 
+# gcp
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
+
 # lazy-awslogs
 . $HOME/go/src/github.com/cm-igarashi-ryosuke/lazy-awslogs/shell-completion/lazy-awslogs.fish
