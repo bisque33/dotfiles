@@ -1,5 +1,12 @@
 # dotfile
 
+## gemrc
+
+```bash
+rm ~/.gemrc
+ln -s ~/dotfiles/.gemrc ~/.gemrc
+```
+
 ## tigrc
 
 ```bash
