@@ -1,13 +1,20 @@
 # dotfile
 
-## gemrc
+## gem
 
 ```bash
 rm ~/.gemrc
 ln -s ~/dotfiles/.gemrc ~/.gemrc
 ```
 
-## tigrc
+## zsh
+
+```bash
+rm ~/.zshrc
+ln -s ~/dotfiles/.zshrc ~/.zshrc
+```
+
+## tig
 
 ```bash
 rm /usr/local/etc/tigrc
