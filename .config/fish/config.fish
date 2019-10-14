@@ -1,18 +1,17 @@
 # PATH
-# set -x PATH /usr/local/bin /usr/bin /bin /usr/sbin /sbin
+set -x PATH /usr/local/bin /usr/local/sbin /usr/bin /bin /usr/sbin /sbin
 
 set -x EDITOR vim
 
 # key bind
 function fish_user_key_bindings
-  bind \cr peco_select_history # peco
-  bind \cg peco_select_ghq_repository  # ghq
+  bind \cr 'peco_select_history (commandline -b)'
 end
 
 # alias
 balias be 'bundle exec'
-balias docc 'docker-compose'
-balias kube 'kubectl'
+balias d  'docker'
+balias dc 'docker-compose'
 
 # anyenv 非対応
 # set -x PATH "$HOME/.anyenv/bin $PATH"
