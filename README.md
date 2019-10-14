@@ -7,6 +7,13 @@ rm ~/.gemrc
 ln -s ~/dotfiles/.gemrc ~/.gemrc
 ```
 
+## vim
+
+```bash
+rm ~/.vimrc
+ln -s ~/dotfiles/.vimrc ~/.vimrc
+```
+
 ## zsh
 
 ```bash
