@@ -28,3 +28,14 @@ set -x PATH $PATH $GOPATH/bin
 
 # lazy-awslogs
 . $HOME/go/src/github.com/cm-igarashi-ryosuke/lazy-awslogs/shell-completion/lazy-awslogs.fish
+
+# 独自関数
+## SQLをフォーマットして出力する
+function sqlf
+  echo $argv | npx sql-formatter-cli
+end
+
+## JSONStringをフォーマットして出力する
+function jsonf
+  echo $argv | jq
+end
