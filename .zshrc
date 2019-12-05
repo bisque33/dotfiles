@@ -88,7 +88,7 @@ fi
 # cdr, add-zsh-hook を有効にする
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
 add-zsh-hook chpwd chpwd_recent_dirs
- 
+
 # cdr の設定
 zstyle ':completion:*' recent-dirs-insert both
 zstyle ':chpwd:*' recent-dirs-max 500
@@ -181,3 +181,10 @@ function aws_account_info {
 
 # )ofni_tnuocca_swa($ is $(aws_account_info) backwards
 PROMPT=`echo $PROMPT | rev | sed 's/ / )ofni_tnuocca_swa($ /'| rev`
+
+# 独自関数
+## SQLをフォーマットして出力する
+alias sqlf='(){echo $1 | npx sql-formatter-cli}'
+
+## JSON Stringをフォーマットして出力する
+alias jsonf='(){echo $1 | jq}'
