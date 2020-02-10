@@ -5,7 +5,7 @@ set -x EDITOR vim
 
 # key bind
 function fish_user_key_bindings
-  bind \cr 'peco_select_history (commandline -b)'
+    bind \cr 'peco_select_history (commandline -b)'
 end
 
 # alias
@@ -14,14 +14,17 @@ balias d  'docker'
 balias dc 'docker-compose'
 
 # anyenv
-status --is-interactive; and . (anyenv init - | psub)
+status --is-interactive
+and . (anyenv init - | psub)
+
+# goenv
+status --is-interactive
+and source (goenv init -|psub)
+set -x PATH $PATH $GOPATH/bin
+set -x PATH $PATH $GOROOT/bin
 
 # direnv
 eval (direnv hook fish)
-
-# go
-set -x GOPATH $HOME/go
-set -x PATH $PATH $GOPATH/bin
 
 # gcp
 . /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
@@ -32,10 +35,10 @@ set -x PATH $PATH $GOPATH/bin
 # 独自関数
 ## SQLをフォーマットして出力する
 function sqlf
-  echo $argv | npx sql-formatter-cli
+    echo $argv | npx sql-formatter-cli
 end
 
 ## JSONStringをフォーマットして出力する
 function jsonf
-  echo $argv | jq
+    echo $argv | jq
 end
