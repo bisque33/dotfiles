@@ -10,7 +10,7 @@ end
 
 # alias
 balias be 'bundle exec'
-balias d  'docker'
+balias d 'docker'
 balias dc 'docker-compose'
 
 # anyenv
@@ -31,6 +31,9 @@ eval (direnv hook fish)
 
 # lazy-awslogs
 . $HOME/go/src/github.com/cm-igarashi-ryosuke/lazy-awslogs/shell-completion/lazy-awslogs.fish
+
+# aws_completer
+complete -c aws -f -a '(begin; set -lx COMP_SHELL fish; set -lx COMP_LINE (commandline); /usr/local/bin/aws_completer; end)'
 
 # 独自関数
 ## SQLをフォーマットして出力する
