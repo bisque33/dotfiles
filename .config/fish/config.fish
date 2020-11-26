@@ -26,6 +26,9 @@ set -x PATH $PATH $GOROOT/bin
 # direnv
 eval (direnv hook fish)
 
+# flutter
+set -x PATH $PATH $HOME/flutter/bin
+
 # gcp
 . /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
 
