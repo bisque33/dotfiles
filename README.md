@@ -14,6 +14,13 @@ rm ~/.vimrc
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 ```
 
+## bash
+
+```bash
+rm ~/.bashrc
+ln -s ~/dotfiles/.bashrc ~/.bashrc
+```
+
 ## zsh
 
 ```bash
