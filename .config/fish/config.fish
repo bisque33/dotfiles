@@ -9,7 +9,8 @@ function fish_user_key_bindings
 end
 
 # alias
-balias be 'bundle exec'
+balias b 'rbenv exec bundle'
+balias be 'rbenv exec bundle exec'
 balias d 'docker'
 balias dc 'docker-compose'
 
